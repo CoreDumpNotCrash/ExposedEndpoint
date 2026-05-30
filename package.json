@@ -1,0 +1,28 @@
+{
+  "name": "exposedendpointbot",
+  "version": "1.0.0",
+  "description": "Discord bot that manages the server along with fun features for members.",
+  "license": "MIT",
+  "author": "CoreDumpNotCrash",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "start": "node build.js && node src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "prettier": "3.8.3"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^2.6.1",
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2"
+  }
+}
