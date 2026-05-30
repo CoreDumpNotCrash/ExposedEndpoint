@@ -45,6 +45,14 @@ const quotes = [
     quote: 'In the middle of difficulty lies opportunity.',
     author: 'Albert Einstein',
   },
+  {
+    quote: 'Placeholder text.',
+    author: 'CoreDumpNotCrash',
+  },
+  {
+    quote: 'Core was here.',
+    author: 'CoreDumpNotCrash',
+  },
 ];
 
 function returnMessageToOutput(quote) {
