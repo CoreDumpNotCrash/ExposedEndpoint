@@ -15,11 +15,12 @@ module.exports = {
     const countdown = interaction.options.getInteger('countdown') ?? 30;
     const channel = interaction.channel;
 
-    await interaction.reply('Countdown started!');
-    let countDownMessage = await channel.send(`Countdown: ${countdown}`);
+    await interaction.reply(`Countdown: ${countdown}`);
+
+    // await channel.send('Countdown started!');
 
     for (let i = countdown; i >= 0; i--) {
-      await countDownMessage.edit(`Countdown: ${i}`);
+      interaction.editReply(`Countdown: ${i}`);
       await new Promise((resolve) => setTimeout(resolve, 1000));
     }
 
