@@ -64,6 +64,11 @@ module.exports = {
     .setName('random-quote')
     .setDescription('Says a random quote')
     .setDMPermission(true)
+    .setContexts(
+      discord.InteractionContextType.PrivateChannel,
+      discord.InteractionContextType.BotDM,
+      discord.InteractionContextType.Guild,
+    )
     .addStringOption((option) => {
       return option
         .setName('author')
