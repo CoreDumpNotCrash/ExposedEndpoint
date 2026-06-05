@@ -74,15 +74,17 @@ module.exports = {
   async execute(client, interaction) {
     const hasAuthor = interaction.options.getString('author') ? true : false;
 
-    if (hasAuthor) {
-      const author = interaction.options.getString('author');
-      const quote = quotes.find(
-        (q) => q.author.toLowerCase() === author.toLowerCase()
-      );
-      await interaction.reply(returnMessageToOutput(quote));
-    } else {
+    if (!hasAuthor) {
       const quote = quotes[Math.floor(Math.random() * quotes.length)];
       await interaction.reply(returnMessageToOutput(quote));
+      return;
     }
+
+    const author = interaction.options.getString('author');
+    const quote = quotes.find(
+      (q) => q.author.toLowerCase() === author.toLowerCase()
+    );
+
+    await interaction.reply(returnMessageToOutput(quote));
   },
 };
