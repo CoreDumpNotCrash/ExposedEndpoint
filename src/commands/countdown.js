@@ -9,10 +9,10 @@ module.exports = {
         .setName('countdown')
         .setMinValue(1)
         .setMaxValue(300)
-        .setDescription('Countdown in seconds. Default: 10');
+        .setDescription('Countdown in seconds. Default: 30');
     }),
   async execute(client, interaction) {
-    const countdown = interaction.options.getInteger('countdown') ?? 10;
+    const countdown = interaction.options.getInteger('countdown') ?? 30;
     const channel = interaction.channel;
 
     await interaction.reply('Countdown started!');
